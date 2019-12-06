@@ -1,4 +1,4 @@
--- para conectar ao MySQL mysql --user=root --password=
+-- para conectar ao MySQL: mysql --user=root --password=
 
 -- cria a base de dados
 create schema db_test default character set utf8;
@@ -18,4 +18,13 @@ create table tb_usuarios (
 -- insere dois usuarios
 insert into tb_usuarios(nome, email, senha, tipo_user) values ("Administrador", "admin@senac.com.br", "123456", "admin");
 insert into tb_usuarios(nome, email, senha) values ("Usuario do Sistema", "usuario@senac.com.br", "123456");
+insert into tb_usuarios(nome, email, senha) values ("Usuario2 do Sistema", "usuario2@senac.com.br", md5("123456"));
 
+-- exibe todas as tabelas
+show tables;
+
+-- descreve a tabela selecionada
+desc tb_usuarios;
+
+-- lista todos os usuários com todas as colunas da tabela
+select * from tb_usuarios;
